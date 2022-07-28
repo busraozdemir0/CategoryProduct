@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Product>
+
+<div class="col-lg-8 left-blog-info-w3layouts-agileits text-md-left">
+    @foreach (var item in Model)
+    {
+        <div class="blog-grid-top">
+            <div class="b-grid-top">
+                <div class="blog_info_left_grid">
+                    <a href="single.html">
+                        <img src="/images/@item.imagePath" class="img-fluid" alt="" width="350" height="200">
+                    </a>
+                </div>
+            </div>
+            <h3>
+                <a href="single.html">@item.ProductName </a>
+            </h3>
+            <h4>@item.ProductPrice ₺</h4>
+            <p>@item.ProductDescription</p>
+            <a href="/Product/Index/" class="btn btn-primary read-m">Ürün Listesi</a>
+        </div>
+    }
+</div>
+<br />
+<br />
+<br />

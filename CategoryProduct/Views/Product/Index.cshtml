@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/EShopLayout.cshtml";
+}
+
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5 pb-3">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 pb-1">
+                <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
+                    <a href="" class="cat-img position-relative overflow-hidden mb-3">
+                        <img class="img-fluid" src="/images/@item.imagePath" alt="">
+                    </a>
+                    <h5 class="font-weight-semi-bold m-0">@item.ProductName</h5>
+                    <p class="text-right">@item.ProductPrice ₺</p>
+                    <a href="/Product/ProductDetails/@item.ProductId" class="btn btn-primary read-m">Ürüne Git</a>
+                </div>
+                
+            </div>
+        }
+
+    </div>
+</div>

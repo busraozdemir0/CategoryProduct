@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.Category
+@{
+    ViewData["Title"] = "CategoryAdd";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yeni Kategori Ekleme Sayfası</h1>
+<br />
+<form class="form-group" action="CategoryAdd" asp-controller="Category" method="post" enctype="multipart/form-data">
+
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+
+    @Html.Label("Kategori Açıklaması")
+    @Html.TextBoxFor(x => x.CategoryDescription,new { @class = "form-control" })
+
+    @Html.Label("Kategori Resim")
+    @Html.TextBoxFor(x => x.CategoryImage, new { @class = "form-control" })
+
+    @*@Html.Label("Resim Seç")
+    <input type="file" name="imageUrl" />
+    <br />*@
+    <br />
+    <button type="submit" class="btn btn-info">Kaydet</button>
+</form>
+

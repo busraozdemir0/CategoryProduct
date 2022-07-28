@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kayıt Ol</title>
+
+    <!-- Font Icon -->
+    <link href="~/kayıtol/fonts/material-icon/css/material-design-iconic-font.css" rel="stylesheet" />
+
+    <!-- Main css -->
+    <link href="~/kayıtol/css/kayıtol.css" rel="stylesheet" />
+</head>
+<body>
+    <center>
+        <div class="main">
+            <!-- Sign up form -->
+            <section class="signup">
+                <div class="container">
+                    <div class="signup-content">
+                        <div class="signup-form">
+                            <h2 class="form-title">Üye Ol</h2>
+                            <form method="POST" class="register-form" id="register-form">
+                                <div class="form-group">
+                                    <label for="User Name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="UserName" id="userName" placeholder="Kullanıcı Adı" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="E-Mail"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="eMail" id="email" placeholder="E-Mail" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="Password" id="password" placeholder="Şifre" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                    <input type="password" name="Password" id="re_password" placeholder="Şifreyi tekrar girin" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                    <label for="agree-term" class="label-agree-term">
+                                        <span><span></span></span>Tüm şartları kabul ediyorum.
+                                    </label>
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="submit" name="signup" id="signup" class="form-submit" value="Kayıt Ol" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="signup-image">
+                            <figure><img src="~/kayıtol/images/signup-image.jpg" /></figure>
+                            <a href="#" class="signup-image-link">Beni hatırla</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </center>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

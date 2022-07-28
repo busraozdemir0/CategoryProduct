@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş Yap</title>
+    <link href="~/kayıtol/css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="outer-box">
+                    <div class="login-box">
+                        <div class="signin-image">
+                            <figure><img src="~/kayıtol/images/signin-image.jpg" /></figure>
+                        </div>
+                        <h4 class="login-text">GİRİŞ</h4>
+                        @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+                        {
+                            <center>
+                                <input type="text" name="UserName" placeholder="Kullanıcı Adı">
+                                <input type="password" name="Password" placeholder="Şifre">
+                                <button id="btn-login">Giriş Yap</button>
+                                <p>Üye değil misin? Üye değilsen kayıt ol. </p>
+                                <a class="btn btn-primary" href="/KayıtOl/Index/">Kayıt Ol </a>
+                            </center>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+

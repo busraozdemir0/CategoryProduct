@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+        <h3 class="w3-bar-item">Admin Panel</h3>
+        <a href="/Product/Index" class="w3-bar-item w3-button">Ana Sayfa</a>
+        <a href="/Admin/Product/ProductAdd" class="w3-bar-item w3-button">Ürün Ekleme</a>
+        <a href="/Admin/Category/CategoryAdd" class="w3-bar-item w3-button">Kategori Ekleme</a>
+        <a href="/Admin/Product/Index" target="_blank" class="w3-bar-item w3-button btn-success">Ürün Listesi</a>
+        <a href="/Admin/Category/Index" target="_blank" class="w3-bar-item w3-button btn-info">Kategori Listesi</a>
+        <a href="/Login/LogOut/" class="w3-bar-item w3-button btn-danger">Çıkış Yap</a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:25%">
+
+        <div class="w3-container" style="background-image: linear-gradient(120deg, #3498db, #8e44ad);">
+            <h1 style="color:white;">E Shopper Admin Paneli</h1>
+        </div>
+        <div class="w3-container">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
+
+
